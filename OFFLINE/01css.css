@@ -1,0 +1,5 @@
+ul,ol,li{list-style: none;}
+#container{
+    width: 1380px;
+    margin: auto 0;
+}
