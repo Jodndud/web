@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>반응형 웹 예제</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    *{margin: 0;padding-inline: 0;}
+    /* 기본 스타일 (모바일 우선) */
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* 헤더 스타일 */
+    header {
+      background-color: #3498db;
+      color: white;
+      padding: 1rem;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 1.5rem;
+    }
+
+    /* 네비게이션 스타일 */
+    .menu-toggle {
+      display: block; /* 모바일에서는 메뉴 토글 버튼 표시 */
+      background: none;
+      border: none;
+      color: white;
+      font-size: 1.5rem;
+      cursor: pointer;
+      float: right;
+      margin-top: -30px;
+    }
+
+    nav {
+      display: none; /* 모바일에서는 기본적으로 메뉴 숨김 */
+    }
+
+    .nav-list {
+      list-style: none;
+      padding: 0;
+      margin: 1rem 0 0 0;
+    }
+
+    .nav-list li a {
+      color: white;
+      text-decoration: none;
+      display: block;
+      padding: 0.5rem 0;
+    }
+
+    /* 컨테이너와 카드 스타일 */
+    .container {
+      padding: 1rem;
+      display: grid;
+      grid-template-columns: repeat(1, fr);
+      gap: 1rem;
+    }
+
+    .card {
+      background-color: #f9f9f9;
+      border-radius: 5px;
+      padding: 1.5rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      margin: 0;
+      display: flex;flex-direction: column;
+
+    }
+    .card > h2{margin-bottom: 20px;}
+
+    @media(min-width:768px){
+      .container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+
+    }
+    @media(min-width:768px){
+      
+    }
+
+  </style>
+
+</head>
+<body>
+  <header>
+    <h1>반응형 웹사이트</h1>
+    <button class="menu-toggle">☰</button>
+    <nav>
+      <ul class="nav-list">
+        <li><a href="#">홈</a></li>
+        <li><a href="#">소개</a></li>
+        <li><a href="#">서비스</a></li>
+        <li><a href="#">연락처</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main>
+    <div class="container">
+      <div class="card">
+        <h2>카드 제목 1</h2>
+        <p>이 카드의 내용입니다. 화면 크기에 따라 레이아웃이 변경됩니다.</p>
+      </div>
+      <div class="card">
+        <h2>카드 제목 2</h2>
+        <p>이 카드의 내용입니다. 화면 크기에 따라 레이아웃이 변경됩니다.</p>
+      </div>
+      <div class="card">
+        <h2>카드 제목 3</h2>
+        <p>이 카드의 내용입니다. 화면 크기에 따라 레이아웃이 변경됩니다.</p>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
